@@ -22,6 +22,10 @@
         </Style>
     </Window.Resources>
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
+           
+        </Grid.RowDefinitions>
     </Grid>
 </Window>
