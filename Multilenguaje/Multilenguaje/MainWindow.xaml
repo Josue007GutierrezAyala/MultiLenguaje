@@ -14,18 +14,47 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="BorderBrush" Value="#FF5F1616"/>
         </Style>
-        <Style x:Key="styleTextBlock" TargetType="{x:Type TextBox}">
+        <Style x:Key="styleTextBlock" TargetType="{x:Type TextBlock}">
             <Setter Property="Margin" Value="0,0,10,0"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="HorizontalAlignment" Value="Right"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
+        
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="80*"/>
-           
         </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock FontSize="22" Text="Select Languaje:" />
+        <ComboBox Name="ddlLanguaje" FontSize="22" Width="120" SelectionChanged="ddlLanguaje_SelectionChanged">
+            <ComboBoxItem IsSelected="True"  Name="English" > English
+            </ComboBoxItem>
+                <ComboBoxItem IsSelected="True"  Name="RussiKiy" >russkiy
+                </ComboBoxItem>
+                <ComboBoxItem IsSelected="True"  Name="Francais" >Le français
+            </ComboBoxItem>
+            <ComboBoxItem IsSelected="True"  Name="Spanish" >Spanish
+            </ComboBoxItem>
+        </ComboBox>
+       </WrapPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Name="lblFirstName" Style= "{StaticResource styleTextBlock}"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Name="lblLastName" Style= "{StaticResource styleTextBlock}"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Name="lblAge" Style= "{StaticResource styleTextBlock}"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Name="lblContact" Style= "{StaticResource styleTextBlock}"/>
+            </Grid>
     </Grid>
 </Window>
